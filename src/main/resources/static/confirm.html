@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:include="included/head"></head>
+<body>
+
+<section class="navbar navbar-fixed-top custom-navbar" th:include="included/navbar"></section>
+
+<section id="confirm">
+    <div class="container">
+        <button class="btn btn-on-white scale_animated" id="confirm_btn">Finish registration</button>
+    </div>
+</section>
+<section id="result" th:include="included/result"></section>
+<footer id="footer" th:include="included/footer"></footer>
+
+
+<script src="js/library/jquery-1.11.1.min.js"></script>
+<script src="js/library/bootstrap.min.js"></script>
+<script src="js/user.js"></script>
+<script src="js/request.js"></script>
+<script src="js/common.js"></script>
+
+</body>
+</html>

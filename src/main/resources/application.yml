@@ -1,0 +1,39 @@
+server:
+  port: 8000
+spring:
+#  datasource:
+#    url: jdbc:postgresql://localhost:5432/country_bank
+#    username: postgres
+#    password: Qwerty1
+#    driver: org.postgresql.Driver
+  thymeleaf:
+    cache: false
+    prefix: classpath:/static/
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: false
+    #database-platform: org.hibernate.dialect.PostgreSQL9Dialect
+  mail:
+    enable: false
+    host: smtp.gmail.com
+    port: 465
+    starttls:
+      enable: true
+    username: countrybankannouncer@gmail.com
+    password: 123456789qwerty
+
+schedule:
+    cron: 0 0 0 * * *
+
+spring.jpa.properties.hibernate.dialect: org.hibernate.dialect.PostgreSQL9Dialect
+
+logging:
+  level:
+    com.cbank.*: DEBUG
+
+---
+spring:
+  profiles: mail
+  mail:
+    enable: true
