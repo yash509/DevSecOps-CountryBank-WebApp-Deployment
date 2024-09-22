@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: pe-wa-deployment
+  name: countrybank-deployment
 spec:
   replicas: 6  # Number of desired replicas
   selector:
     matchLabels:
-      app: pe-wa
+      app: countrybank
   template:
     metadata:
       labels:
-        app: pe-wa
+        app: countrybank
     spec:
       containers:
-      - name: pe-wa
-        image: yash5090/pe-wa:latest
+      - name: countrybank
+        image: yash5090/countrybank:latest
         ports:
-        - containerPort: 5000
+        - containerPort: 8000
